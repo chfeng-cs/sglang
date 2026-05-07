@@ -27,7 +27,7 @@ from sglang.test.test_utils import download_image_with_retry
 class VisionLLMLogitsBase(unittest.IsolatedAsyncioTestCase):
     @classmethod
     def setUpClass(cls):
-        cls.image_url = "https://github.com/sgl-project/sglang/blob/main/examples/assets/example_image.png?raw=true"
+        cls.image_url = "https://raw.githubusercontent.com/sgl-project/sglang/main/examples/assets/example_image.png"
         cls.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         cls.model_path = ""
         cls.chat_template = ""
